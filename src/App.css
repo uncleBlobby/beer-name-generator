@@ -27,7 +27,7 @@
 
 .version-number {
   font-size: 0.8rem;
-  margin-left: 75%;
+  margin-left: 0;
   margin-top: 2rem;
 }
 
@@ -55,18 +55,19 @@
     min-width: 60vw;
   }
   .logo-image {
-    width: 30%;
+    width:auto;
     max-width: 100%;
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 420px) {
   .container {
     /*border: 1px solid pink;*/
     min-height: 80vh;
     min-width: 80vw;
   }
   .logo-image {
+    width: auto;
     margin-bottom: 1rem;
   }
   .version-number {
@@ -79,4 +80,9 @@
   .beerNameDisplay {
     margin-top: 1.4rem;
   }
+}
+
+.generateButton {
+  width: 20vw;
+  height: 10vh;
 }
