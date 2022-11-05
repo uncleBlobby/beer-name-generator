@@ -8,7 +8,6 @@ const adjectives = words.A;
 const verbs = words.V;
 
 const pronouns = words.P;
-
 const interjections = words.I;
 
 function App() {
@@ -19,7 +18,7 @@ function App() {
     //const beerName = getRandomVerb() + " " + getRandomAdjective() + " " + getRandomNoun();
     const beerName = getRandomAssortment()
     setBeerName(beerName);
-    console.log(`New beer name: ${beerName}`)
+    //console.log(`New beer name: ${beerName}`)
     //getRandomAssortment();
     //console.log(words);
     //console.log(getRandomNoun())
@@ -44,15 +43,15 @@ function App() {
   const getRandomAssortment = () => {
     switch(Math.floor(Math.random()*3)){
       case 0:
-        console.log(`case 0`);
+        //console.log(`case 0`);
         return getRandomNoun();
         
       case 1:
-        console.log(`case 1`);
+        //console.log(`case 1`);
         return getRandomAdjective() + " " + getRandomNoun();
         
       case 2:
-        console.log(`case 2`);
+        //console.log(`case 2`);
         return getRandomVerb() + " " + getRandomAdjective() + " " + getRandomNoun();
 
     }
