@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import words from 'categorized-words'
-import logo from './logo.png';
+import logo from './assets/logo.png';
 import './App.css'
 
 const nouns = words.N;
@@ -16,9 +16,11 @@ function App() {
   const [beerName, setBeerName] = useState('');
 
   const generateBeerName = () => {
-    const beerName = getRandomAdjective() + " " + getRandomNoun();
+    //const beerName = getRandomVerb() + " " + getRandomAdjective() + " " + getRandomNoun();
+    const beerName = getRandomAssortment()
     setBeerName(beerName);
     console.log(`New beer name: ${beerName}`)
+    //getRandomAssortment();
     //console.log(words);
     //console.log(getRandomNoun())
   }
@@ -34,17 +36,40 @@ function App() {
     return noun;
   }
 
+  const getRandomVerb = () => {
+    const verb = verbs[Math.floor(Math.random()*verbs.length)]
+    return verb
+  }
+
+  const getRandomAssortment = () => {
+    switch(Math.floor(Math.random()*3)){
+      case 0:
+        console.log(`case 0`);
+        return getRandomNoun();
+        
+      case 1:
+        console.log(`case 1`);
+        return getRandomAdjective() + " " + getRandomNoun();
+        
+      case 2:
+        console.log(`case 2`);
+        return getRandomVerb() + " " + getRandomAdjective() + " " + getRandomNoun();
+
+    }
+  }
+
+
   return (
     <div className="App">
+      <div className="container">
       <img className='logo-image' src={logo} />
       <div className="title-header">
         <div className="sub-title">
-          Beer Name Generator
-          <div className='version-number'>
-            v0.1-alpha
-          </div>
+          Beer Name <br></br><br></br>Generator
         </div>
-        
+        <div className='version-number'>
+            v0.1-alpha
+        </div>  
       </div>
       
       <div className='beerNameDisplay'>
@@ -52,7 +77,8 @@ function App() {
       </div>
       <br>
       </br>
-      <button onClick={() => generateBeerName()}>Generate!</button>
+      <button className='generateButton' onClick={() => generateBeerName()}>Go!</button>
+      </div>
     </div>
   )
 }

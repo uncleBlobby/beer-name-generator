@@ -6,31 +6,43 @@
 }
 
 .title-header {
-  margin-top: 0;
-  font-size: 3.2rem;
+  margin-top: -1rem;
+  font-size: 2.8rem;
 }
 
 .sub-title {
-  margin-top: 0rem;
-  margin-bottom: 2.5rem;
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 3rem;
 }
 
 .beerNameDisplay {
   margin-top: 2rem;
-  margin-bottom: 2rem;
-  font-size: 1.5rem;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  font-size: 2rem;
+  min-height: 12vh;
+  max-height: 15vh;
 }
 
 .version-number {
   font-size: 0.8rem;
   margin-left: 75%;
+  margin-top: 2rem;
 }
 
 .logo-image {
-  margin-top: -5rem;
+  margin-top: 0;
   margin-bottom: 2.5rem;
-  max-width: 75%;
+  width: 50%;
+  max-width: 50%;
+  height: 30vh;
+  max-height: 30vh;
+  /*border: 1px solid black;*/
 }
 
+.container {
+  /*border: 1px solid pink;*/
+  margin: auto;
+  min-width: 85vw;
+  min-height: 90vh;
+}
