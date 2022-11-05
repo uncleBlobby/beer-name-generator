@@ -36,10 +36,13 @@ function App() {
 
   return (
     <div className="App">
-      <img src={logo} />
+      <img className='logo-image' src={logo} />
       <div className="title-header">
         <div className="sub-title">
           Beer Name Generator
+          <div className='version-number'>
+            v0.1-alpha
+          </div>
         </div>
         
       </div>
