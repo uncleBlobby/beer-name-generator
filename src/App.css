@@ -12,10 +12,11 @@
 
 .sub-title {
   font-size: 3rem;
+  margin-bottom: 2rem;
 }
 
 .beerNameDisplay {
-  margin-top: 2rem;
+  margin-top: 5rem;
   padding-top: 1rem;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
@@ -32,11 +33,11 @@
 
 .logo-image {
   margin-top: 0;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3.5rem;
   width: 50%;
   max-width: 50%;
-  height: 30vh;
-  max-height: 30vh;
+  height: 25vh;
+  max-height: 25vh;
   /*border: 1px solid black;*/
 }
 
@@ -45,4 +46,37 @@
   margin: auto;
   min-width: 85vw;
   min-height: 90vh;
+}
+
+@media only screen and (min-width: 800px) {
+  .container {
+    /*border: 1px solid pink;*/
+    margin: auto;
+    min-width: 60vw;
+  }
+  .logo-image {
+    width: 30%;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .container {
+    /*border: 1px solid pink;*/
+    min-height: 80vh;
+    min-width: 80vw;
+  }
+  .logo-image {
+    margin-bottom: 1rem;
+  }
+  .version-number {
+    margin-top: 1rem;
+    font-size: 0.7rem;
+  }
+  .sub-title {
+    font-size: 2.2rem;
+  }
+  .beerNameDisplay {
+    margin-top: 1.4rem;
+  }
 }

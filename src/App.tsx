@@ -68,7 +68,7 @@ function App() {
           Beer Name <br></br><br></br>Generator
         </div>
         <div className='version-number'>
-            v0.1-alpha
+            v0.1 alpha
         </div>  
       </div>
       
